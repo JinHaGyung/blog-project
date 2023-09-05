@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+/* eslint-disable*/
+
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+  let [title,setTitle]=useState(["리액트 스터디","State 연습하기","리액트 이론"]);
+  let [count,setCount]=useState(0);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='black-nav'>
+        <h4>REACT BLOG</h4>
+      </div>
+      <div className='list'>
+        <h4>{title[0]} <span onClick={()=>{setCount(count+=1)}}>👍</span> {count} </h4>
+        <p>2월 17일 발행</p>
+      </div>
     </div>
   );
 }
