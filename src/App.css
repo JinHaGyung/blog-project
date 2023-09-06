@@ -20,7 +20,8 @@ div{
 
 .list_wrapper{
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  
   margin-top: 50px;
   flex-wrap: wrap;
 }

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import './App.css';
+import Modal from "./component/Model"
 
 let today = new Date();   
 
@@ -54,9 +55,9 @@ function App() {
         })}
         </div>
       </div>
-      {modal ? <Modal titleNum={titleNum} title={title} setTitle={setTitle} date={date} /> :null}
+      {modal ? <Modal titleNum={titleNum} title={title} setTitle={setTitle} date={date} 
+      count={count} setCount={setCount} bestCount={bestCount} setBestCount={setBestCount} setDate={setDate}/>  :null}
       <input onChange={(e)=>{setPutMemo(e.target.value);
-        console.log(putMemo)
       }}></input>
       <button onClick={()=>{
          let titleArray = [...title,putMemo];
@@ -72,14 +73,5 @@ function App() {
 );
 }
 
-const Modal=({title,setTitle,titleNum,date})=>{
-  return(
-    <div className='modal'>
-      <h4>{title[titleNum]}</h4>
-      <p>DATA : {date[titleNum]}</p>
-      <p>상세내용</p>
-     </div>
-  )
-}
 
 export default App;
