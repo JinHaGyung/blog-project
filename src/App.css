@@ -34,10 +34,52 @@ div{
   text-align: left;
   box-shadow: 5px 5px 5px rgb(192, 192, 192);
 }
-
+.modalWrap{
+  position: fixed;
+  top: 0;
+  background-color: RGBA(50,50,50,0.8);
+  width: 100%;
+  height: 100vh;
+}
+#modalClose{
+  position:relative;
+  float:left;
+  left: 82%;
+  top: 20%;
+  color: #eeeeee;
+  display:inline-block;
+  width:50px;
+  height:50px;
+  text-align:center;
+  margin-right:20px;
+}
+#modalClose::after{
+  content: "\00d7"; 
+  font-size:50pt;
+  line-height:35px;
+}
 .modal{
-  margin-top: 20px;
+  position: fixed;
+  top: 20%;
+  left: 20%;
+  width: 60%;
+  height: 50%;
   padding: 20px;
   background-color: #eee;
   text-align: left;
+}
+
+.title{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.delete{
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  width: 80px;
+  height: 40px;
+  border: none;
+  background-color: #dadada;
 }

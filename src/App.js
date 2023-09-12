@@ -14,6 +14,7 @@ function App() {
   let [titleNum, setTitleNum]=useState();
   //자료 내용
   let [date,setDate] = useState(["2월 17일 발행","5월 4일 발행","7월 27일 수정"]);
+  let [note,setNote] = useState(["리액트로 만드는 블로그 프로젝트","리액트 State를 활용한 글 내용 관리하기","리액트 hook과 state이론"])
   // 추천 클릭수
   let [count,setCount]=useState([3,5,1]);
   let [bestCount,setBestCount] = useState([0,0,0]);
@@ -55,7 +56,7 @@ function App() {
         })}
         </div>
       </div>
-      {modal ? <Modal titleNum={titleNum} title={title} setTitle={setTitle} date={date} 
+      {modal ? <Modal modal={modal} setModal={setModal} titleNum={titleNum} title={title} setTitle={setTitle} date={date} 
       count={count} setCount={setCount} bestCount={bestCount} setBestCount={setBestCount} setDate={setDate}/>  :null}
       <input onChange={(e)=>{setPutMemo(e.target.value);
       }}></input>
